@@ -1,16 +1,17 @@
 // Write a program to calculate power using recursion
+
 import java.util.Scanner;
 
 public class Power {
     public static int calPower(int x, int n) {
-        if (n == 0) {
+        if (n == 0) {  // base case
             return 1;
         }
-        return x * calPower(x, n - 1);
+        return x * calPower(x, n - 1); // recursive call
     }
 
     public static int optimizedCalPower(int x, int n) {
-        if (n == 0) {
+        if (n == 0) {  // base case
             return 1;
         }
         int halfPower = optimizedCalPower(x, n / 2);
